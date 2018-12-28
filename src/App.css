@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+  background: #ececec;
+}
+
+#root {
+  height: 100%;
+}
+
+.ant-list-item-content-single {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ant-list-item {
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.ant-list-item .anticon {
+  cursor: pointer;
+  padding: 5px;
+  transition: .3s;
+}
+
+.ant-list-item .anticon:hover {
+  color: #1890ff;
+}

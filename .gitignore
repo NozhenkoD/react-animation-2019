@@ -1,0 +1,17 @@
+.idea
+.DS_Store
+config.js
+node_modules/*
+tmp/*
+lib/*
+logs/*
+dump.rdb
+*.zip
+*.log
+ng-app.js
+Makefile.go
+.module-cache
+webpanel/node_modules/*
+webpanel/public/*
+build/*
+functions/node_modules/*

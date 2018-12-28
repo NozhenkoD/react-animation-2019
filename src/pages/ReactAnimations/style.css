@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    margin: 25px;
+}
+
+.react-animate-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 10px;
+    box-shadow: 0 0 8px 1px rgba(0,0,0, .1);
+}
+
+h1 {
+    margin: 25px!important;
+}

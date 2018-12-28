@@ -1,0 +1,47 @@
+.react-transition-group {
+    display: flex;
+    height: 100%;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.project {
+    width: 400px;
+    margin-top: 20px;
+}
+
+
+.example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.example-leave {
+    opacity: 1;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+.item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    margin-bottom: 10px;
+    height: 30px;
+    background: #fff;
+    border-radius: 5px;
+    border-bottom: 1px solid #fff;
+    color: #444;
+    box-sizing: border-box;
+}
