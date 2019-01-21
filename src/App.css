@@ -28,3 +28,30 @@ html, body {
 .ant-list-item .anticon:hover {
   color: #1890ff;
 }
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding-top: 61px;
+}
+
+.wrapper-react-animations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.wrapper-ant-design {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 0;
+  }
+}

@@ -1,6 +1,7 @@
 .react-transition-group {
     display: flex;
     height: 100%;
+    width: 100%;
     padding: 50px;
     flex-direction: column;
     align-items: center;
@@ -8,7 +9,7 @@
 }
 
 .project {
-    width: 400px;
+    width: 380px;
     margin-top: 20px;
 }
 
@@ -44,4 +45,12 @@
     border-bottom: 1px solid #fff;
     color: #444;
     box-sizing: border-box;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .project {
+        width: 300px;
+    }
 }

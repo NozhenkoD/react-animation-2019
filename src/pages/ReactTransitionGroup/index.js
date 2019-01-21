@@ -31,7 +31,7 @@ export default class ReactTransitionGroup extends Component {
     ));
 
     return (
-      <Fragment>
+      <div className="react-transition-group">
         <Button onClick={this.handleAdd}/>
         <div className="project">
           <CSSTransitionGroup
@@ -40,7 +40,7 @@ export default class ReactTransitionGroup extends Component {
             {items}
           </CSSTransitionGroup>
         </div>
-      </Fragment>
+      </div>
     );
   }
 }

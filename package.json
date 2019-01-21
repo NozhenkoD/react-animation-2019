@@ -26,8 +26,12 @@
   ],
   "devDependencies": {
     "random-name": "^0.1.2",
+    "rc-tween-one": "2.2.22",
     "react-animations": "^1.0.0",
     "react-motion": "^0.5.2",
+    "react-reveal": "1.2.2",
+    "react-router": "4.3.1",
+    "react-router-dom": "4.3.1",
     "styled-components": "^4.1.3"
   }
 }

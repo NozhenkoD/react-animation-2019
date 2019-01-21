@@ -5,31 +5,36 @@ import {Motion, spring} from 'react-motion';
 export default class ReactMotion extends Component {
 
   state = {
-    height: 38,
-    rotate: 0
+    top: 0,
+    opacity: .5,
   };
   animate = () => {
-    const { height, rotate } = this.state;
-    let newHeight = height;
-    let newRotate = rotate;
-    newHeight = height === 233 ? 38 : 233;
-    newRotate = rotate === 720 ? 0 : 720;
-    this.setState({ height: newHeight, rotate: newRotate });
+    const { top, opacity } = this.state;
+    let newTop = top;
+    let newOpacity = opacity;
+    newTop = top === 0 ? 30 : 0;
+    console.log('newTop', newTop);
+    newOpacity = opacity === 1 ? .5 : 1;
+    this.setState({ top: newTop, opacity: newOpacity });
   };
+  componentDidMount() {
+    this.animate();
+  }
   render() {
-    const { height, rotate } = this.state;
+    const { top, opacity } = this.state;
     return (
-      <div className="App">
+      <div style={styles.app}>
         <div style={styles.button} onClick={this.animate}>Animate</div>
         <Motion
-          style={{ height: spring(height), rotate: spring(rotate) }}>
+          style={{
+            height: spring(top, { stiffness: 100 }),
+            opacity: spring(opacity, { stiffness: 100})
+          }}>
           {
-            ({ height, rotate }) => <div style={styles.menu}>
-              <img
-                style={Object.assign({}, styles.img, { height, width: height, transform: `rotate(${rotate}deg)`},  )}
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwnouqUqRgcy9V1gvUm3ug3Sbia82ca_-MqFGBpUkedw6Sc-P3"
-                onClick={() => this.animate()}
-              />
+            ({ height, opacity }) => <div>
+              <h1
+                style={Object.assign({}, styles.title, { transform: `translateX(${top})` }) }
+              >Hello</h1>
             </div>
           }
         </Motion>
@@ -41,16 +46,15 @@ export default class ReactMotion extends Component {
 
 
 const styles = {
-  img: {
+  app: {
     width: '100%',
-    position: 'absolute',
-    cursor: 'pointer',
+    height: 500,
+    backgroundImage: 'url(https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)',
+    backgroundSize: 'cover',
   },
-  menu: {
-    overflow: 'hidden',
-    width: 38,
-    height: 38,
-    marginTop: 20,
+  title: {
+    textAlign: 'center',
+    transition: '.3s',
   },
   selection: {
     padding: 10,
