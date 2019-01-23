@@ -10,6 +10,8 @@ import "antd/dist/antd.css";
 import './App.css';
 import Nav from './components/Nav';
 
+const MAIN_PATH = 'react-animation-2019';
+
 class App extends Component {
   render() {
     return (
@@ -24,11 +26,11 @@ class App extends Component {
         <Router>
           <div className="main-content">
             <Nav />
-            <Route path="/" exact component={ReactAnimations} />
-            <Route path="/ReactReveal/" component={ReactReveal} />
-            <Route path="/ExampleCss/" component={ExampleCss} />
-            <Route path="/ReactTransitionGroup/" component={ReactTransitionGroup} />
-            <Route path="/AntDesign/" component={AntDesign} />
+            <Route path={`${MAIN_PATH}/`} exact component={ReactAnimations} />
+            <Route path={`${MAIN_PATH}/ReactReveal`} component={ReactReveal} />
+            <Route path={`${MAIN_PATH}/ExampleCss`} component={ExampleCss} />
+            <Route path={`${MAIN_PATH}/ReactTransitionGroup`} component={ReactTransitionGroup} />
+            <Route path={`${MAIN_PATH}/AntDesign`} component={AntDesign} />
           </div>
         </Router>
       </Fragment>
