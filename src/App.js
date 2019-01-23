@@ -26,11 +26,11 @@ class App extends Component {
         <Router>
           <div className="main-content">
             <Nav />
-            <Route path={`${MAIN_PATH}/`} exact component={ReactAnimations} />
-            <Route path={`${MAIN_PATH}/ReactReveal`} component={ReactReveal} />
-            <Route path={`${MAIN_PATH}/ExampleCss`} component={ExampleCss} />
-            <Route path={`${MAIN_PATH}/ReactTransitionGroup`} component={ReactTransitionGroup} />
-            <Route path={`${MAIN_PATH}/AntDesign`} component={AntDesign} />
+            <Route path={`/${MAIN_PATH}/`} exact component={ReactAnimations} />
+            <Route path={`/${MAIN_PATH}/ReactReveal`} component={ReactReveal} />
+            <Route path={`/${MAIN_PATH}/ExampleCss`} component={ExampleCss} />
+            <Route path={`/${MAIN_PATH}/ReactTransitionGroup`} component={ReactTransitionGroup} />
+            <Route path={`/${MAIN_PATH}/AntDesign`} component={AntDesign} />
           </div>
         </Router>
       </Fragment>
