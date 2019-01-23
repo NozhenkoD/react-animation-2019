@@ -9,8 +9,7 @@ import AntDesign from './pages/AntDesign';
 import "antd/dist/antd.css";
 import './App.css';
 import Nav from './components/Nav';
-
-const MAIN_PATH = 'react-animation-2019';
+import { MAIN_PATH } from './constants/common';
 
 class App extends Component {
   render() {
