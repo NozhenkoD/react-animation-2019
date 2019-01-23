@@ -13,5 +13,4 @@ Makefile.go
 .module-cache
 webpanel/node_modules/*
 webpanel/public/*
-build/*
 functions/node_modules/*

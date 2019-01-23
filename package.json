@@ -13,8 +13,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://nozhenkod.github.io/react-animation-2019",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -25,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "2.0.1",
     "random-name": "^0.1.2",
     "rc-tween-one": "2.2.22",
     "react-animations": "^1.0.0",
