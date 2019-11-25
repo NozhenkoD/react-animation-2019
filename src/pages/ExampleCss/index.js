@@ -3,14 +3,19 @@ import { Icon } from 'antd';
 import './style.css';
 
 export default class ExampleCss extends Component {
+  constructor(props) {
+    super(props);
+    this.wrapperRef = React.createRef();
+  }
+
   handleClick() {
-    const wrapper = document.getElementById('wrapper');
+    const wrapper = this.wrapperRef.current;
     wrapper.classList.toggle('is-nav-open')
   }
 
   render() {
     return (
-      <div id="wrapper" className="wrapper">
+      <div ref={this.wrapperRef} className="wrapper" >
         <div className="nav">
           <Icon className="nav__icon" type="menu-fold" onClick={() => this.handleClick()} />
           <div className="nav__body">
